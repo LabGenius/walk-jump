@@ -8,6 +8,13 @@ Assuming you have [miniconda](https://docs.conda.io/en/latest/miniconda.html) in
 ./scripts/install.sh
 ```
 
+## Data
+Data is managed using git lfs. You will need to install this and run
+`git lfs pull`
+in the data directory.
+The file `poas.csz.gz` will need to be unzipped with gzip.
+You will need to update the hydra data config to point to the location of the data.
+
 ### Training
 The entrypoint `train` is the main driver for training and accepts parameters using Hydra syntax.
 The available parameters for configuration can be found by running `train` --help or by looking in the `src/walkjump/hydra_config` directory
